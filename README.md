@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Kadiyam Green Hub – SNSC Nursery
 
-TODO: Document your project here
+Premium plants and landscape services from Kadiyam, India's largest nursery hub.
