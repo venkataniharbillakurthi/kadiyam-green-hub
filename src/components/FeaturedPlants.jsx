@@ -89,12 +89,7 @@ const FeaturedPlants = () => {
           ))}
         </div>
 
-        {/* Bottom Link */}
-        <div className="mt-16 text-center">
-          <a href="#categories" className="text-[10px] font-bold text-zinc-400 hover:text-green-600 transition-colors uppercase tracking-[0.2em] border-b border-zinc-200 pb-1">
-            View All 1000+ Varieties
-          </a>
-        </div>
+        
       </div>
     </section>
   );

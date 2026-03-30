@@ -36,7 +36,7 @@ const CategoriesSection = () => {
             The Collection
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-900 mb-4">
-            Our Botanical <span className="text-green-600 italic font-medium">Categories</span>
+            Our <span className="text-green-600 italic font-medium">Categories</span>
           </h2>
           <p className="text-zinc-500 text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
             Direct bulk inventory from Kadiyam. Explore our curated selection of 1000+ species for every landscape need.
@@ -90,16 +90,7 @@ const CategoriesSection = () => {
           ))}
         </div>
 
-        {/* Bottom Tagline */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.2em]">
-            Click a category to enquire on WhatsApp
-          </p>
-        </motion.div>
+       
       </div>
     </section>
   );

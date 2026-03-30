@@ -1,11 +1,17 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Instagram, Youtube } from "lucide-react";
+
+const mapRedirectUrl = "https://maps.google.com/?q=Snsc+Nursery+Kadiyam";
 
 const Footer = () => (
   <footer className="bg-foreground text-primary-foreground section-padding py-12">
     <div className="container-narrow">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 className="font-heading text-lg font-bold mb-3">SNSC Nursery</h3>
+          <img
+            src="https://res.cloudinary.com/dhzhuobu2/image/upload/v1773926288/621198387_17889939759420628_8547033588103664593_n-removebg-preview_qp0ljl.png"
+            alt="SNSC Nursery logo"
+            className="h-10 w-auto mb-3"
+          />
           <p className="font-body text-sm text-primary-foreground/70 leading-relaxed max-w-xs">
             Premium plants and landscape services from Kadiyam — India's largest nursery hub. Serving customers nationwide.
           </p>
@@ -29,13 +35,35 @@ const Footer = () => (
             </div>
             <div className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-              <span>GNR Kalyana Mandapam, near Kadiyam, AP</span>
+              <a
+                href={mapRedirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-foreground transition-colors"
+              >
+                GNR Kalyana Mandapam, near Kadiyam, AP
+              </a>
             </div>
           </div>
-          <div className="flex gap-3 mt-4">
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground">Instagram</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground">YouTube</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground">Facebook</a>
+          <div className="flex gap-4 mt-4">
+            <a
+              href="https://www.instagram.com/snsc_nursery_kadiyam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.youtube.com/@snscnurserykadiyam"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
+              <Youtube className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

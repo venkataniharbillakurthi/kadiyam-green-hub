@@ -1,54 +1,55 @@
 import { motion } from "framer-motion";
-import { Palette, Sprout, TreePine, Truck, ArrowUpRight } from "lucide-react";
+import { Package, Sprout, ShieldCheck, Truck, ArrowUpRight } from "lucide-react";
 
 const services = [
   { 
-    icon: Palette, 
-    title: "Landscape Design", 
-    desc: "Bespoke architecture for residential and commercial estates." 
-  },
-  { 
     icon: Sprout, 
-    title: "Bulk Plant Supply", 
-    desc: "Access 1000+ premium varieties directly from Kadiyam." 
+    title: "Bulk Supply", 
+    desc: "Direct access to 1000+ premium species from Kadiyam's fertile silt." 
   },
   { 
-    icon: TreePine, 
-    title: "Garden Development", 
-    desc: "End-to-end planning, planting, and curated maintenance." 
+    icon: ShieldCheck, 
+    title: "Quality Care", 
+    desc: "Hand-inspected root systems ensuring 99% survival rates post-transit." 
+  },
+  { 
+    icon: Package, 
+    title: "Safe Packing", 
+    desc: "Specialized climate-controlled packaging for long-distance hauls." 
   },
   { 
     icon: Truck, 
-    title: "Pan-India Logistics", 
-    desc: "Secure nationwide shipping with professional plant care." 
+    title: "Fast Logistics", 
+    desc: "Dedicated transport network delivering to every corner of India." 
   },
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 md:py-28 bg-zinc-50/50">
+  <section id="services" className="py-16 md:py-32 bg-white">
     <div className="max-w-6xl mx-auto px-6 lg:px-10">
       
-      {/* Header */}
+      {/* Header - Mobile Optimized Typography */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16 md:mb-20"
+        className="text-left md:text-center mb-12 md:mb-24"
       >
-        <span className="inline-block px-3 py-1 mb-4 rounded-full bg-green-100 text-green-800 text-[10px] font-bold uppercase tracking-[0.2em]">
+        <span className="inline-block px-3 py-1 mb-4 rounded-full bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-[0.3em]">
           Our Expertise
         </span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-900 mb-4">
-          Professional <span className="text-green-600 italic font-medium">Green Solutions</span>
+        <h2 className="font-display text-2xl md:text-4xl font-bold text-zinc-900 mb-4 leading-tight">
+          Nurturing India's <br className="md:hidden" />
+          <span className="text-green-600 italic font-medium">Green Future</span>
         </h2>
-        <p className="text-zinc-500 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-          Beyond a nursery — we are architects of nature, providing end-to-end botanical and landscaping excellence.
+        <p className="text-zinc-500 text-[11px] md:text-sm max-w-md md:mx-auto leading-relaxed">
+          Standardizing plant procurement with Kadiyam's heritage and modern logistics.
         </p>
       </motion.div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      {/* Grid - 2 columns on mobile for better scannability */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
         {services.map(({ icon: Icon, title, desc }, i) => (
           <motion.div
             key={title}
@@ -56,40 +57,29 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group relative bg-white border border-zinc-200/60 p-8 rounded-2xl hover:shadow-xl hover:shadow-green-900/5 hover:border-green-200 transition-all duration-300"
+            className="group relative bg-zinc-50/50 border border-zinc-100 p-6 md:p-10 rounded-2xl hover:bg-white hover:shadow-2xl hover:shadow-green-900/5 hover:border-green-100 transition-all duration-500"
           >
-            {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-zinc-50 flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
-              <Icon className="w-5 h-5" />
+            {/* Minimalist Icon */}
+            <div className="w-10 h-10 rounded-xl bg-white border border-zinc-100 flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-500 shadow-sm">
+              <Icon strokeWidth={1.5} className="w-5 h-5" />
             </div>
 
-            {/* Content */}
-            <h3 className="text-zinc-900 font-bold text-lg mb-3 flex items-center justify-between">
+            {/* Content - Scaled down for Minimalist look */}
+            <h3 className="text-zinc-900 font-bold text-sm md:text-base mb-2 tracking-tight flex items-center justify-between uppercase">
               {title}
-              <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-green-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
             </h3>
-            <p className="text-zinc-500 text-xs md:text-sm leading-relaxed mb-4">
+            <p className="text-zinc-500 text-[10px] md:text-xs leading-relaxed max-w-[200px]">
               {desc}
             </p>
 
-            {/* Subtle Hover Decoration */}
-            <div className="absolute bottom-0 left-0 h-1 w-0 bg-green-600 transition-all duration-300 group-hover:w-full rounded-b-2xl" />
+            {/* Subtle Highlight line */}
+            <div className="absolute top-0 right-0 h-0 w-[1px] bg-green-100 transition-all duration-500 group-hover:h-full rounded-r-2xl" />
           </motion.div>
         ))}
       </div>
 
-      {/* Trust Quote */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-        className="mt-16 text-center"
-      >
-        <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.3em]">
-          Trusted by Homeowners & Architects Nationwide
-        </p>
-      </motion.div>
+      
     </div>
   </section>
 );
